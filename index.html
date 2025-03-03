@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <!-- 1 -->
     <form id="form">
-        <label for="name">TO DO</label>
+
+          <label for="name">To Do</label>
         <input id="input" type="text">
         <button id="send">Send</button>
         <ul id="list"></ul>
     </form>
 
     <!-- 2 -->
-     <form id="form2">
+    <form id="form2">
         <input id="input2" type="text">
         <button id="btn">Send</button>
      </form>
 
-
-     <form id="form3">
+    <form id="form3">
         <input id="input4" type="text" placeholder="Enter your name(login)">
         <input id="input3" type="text" placeholder="Enter your password">
         <button id="btn3">Send</button>
      </form>
 
-     <!-- 3 -->
-     <form id="form4">
-        <input id="input5" type="text">
-        <button id="btn4">Send</button>
-     </form>
-     <ul id="linkList"></ul>
+    <!-- 3 -->
 
-     <!-- 4 -->
-      <form id="contactForm">
-        <input id="contactInput" type="text" placeholder="Введіть ваше ім'я">
-        <input id="contactInput" type="text" placeholder="Введіть ваше прізвище">
-        <input id="contactInput" type="number" placeholder="Введіть ваш номер телефону">
-        <input id="contactInput" type="email" placeholder="Введіть вашу електронну адресу">
-        <button id="contactBtn1">Зберегти дані</button>
-        <ul id="contactList"></ul>
-      </form>
-      <button id="contactBtn">Показати всі мої дані</button>
+    <div class="container" id="bookmarkApp">
+      <h1>Закладки</h1>
+      <input type="text" id="bookmarkInput" placeholder="URL" />
+      <button id="addBookmarkBtn">Додати</button>
+      <ul id="bookmarkList"></ul>
+    </div>
 
+    <!-- 4 -->
+    <form id="contactForm">
+      <input id="contactInput" type="text" placeholder="Введіть ваше ім'я" />
+      <input
+        id="contactInput"
+        type="text"
+        placeholder="Введіть ваше прізвище"
+      />
+      <input
+        id="contactInput"
+        type="number"
+        placeholder="Введіть ваш номер телефону"
+      />
+      <input
+        id="contactInput"
+        type="email"
+        placeholder="Введіть вашу електронну адресу"
+      />
+      <button id="contactBtn1">Зберегти дані</button>
+      <ul id="contactList"></ul>
+    </form>
+    <button id="contactBtn">Показати всі мої дані</button>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
+
