@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const linkInput = document.querySelector("#bookmarkInput");
 const linkBtn = document.querySelector("#addBookmarkBtn");
 const linkList = document.querySelector("#bookmarkList");
+const editBtn = document.querySelector("#editBookmarkBtn")
 
 const links = JSON.parse(localStorage.getItem("links")) || [];
 
@@ -152,18 +153,26 @@ linkList.addEventListener("click", (e) => {
     showLinks();
   }
   if (e.target.classList.contains("editBTN")) {
-    const index = e.target.parentElement.dataset.id;
+    const index = +e.target.parentElement.dataset.id;
     linkInput.value = links[index];
+    console.log("Array: ",links[index]);
+    console.log("value: ", linkInput.value);
+    linkBtn.style.display = "none"
+    editBtn.style.display = "block"
+    // linkBtn.textContent = "Update";
+    editBtn.addEventListener("click", () =>  {
+      console.log("ArrayLink: ",links[index]);
+      console.log("Array: ",links);
 
-    linkBtn.textContent = "Update";
-    linkBtn.onclick = () =>  {
+      console.log("value: ", linkInput.value);
       links[index] = linkInput.value;
       localStorage.setItem("links", JSON.stringify(links));
       linkInput.value = "";
-      linkBtn.textContent = "Add";
+      linkBtn.style.display = "block";
+    editBtn.style.display = "none"
+
       showLinks();
-      linkBtn.onclick = linkBtnClickHandler;
-    }
+    })
   }
 });
 
